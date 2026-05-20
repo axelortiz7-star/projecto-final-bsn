@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="generator" content="Observable Framework v1.13.4">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="preload" as="style" href="./_observablehq/theme-air,near-midnight.b050d634.css">
+<link rel="preload" as="style" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="preload" as="style" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" crossorigin>
+<link rel="stylesheet" type="text/css" href="./_observablehq/theme-air,near-midnight.b050d634.css">
+<link rel="stylesheet" type="text/css" href="./_observablehq/stdlib/inputs.f7bf0e12.css">
+<link rel="stylesheet" type="text/css" href="./_npm/leaflet@1.9.4/dist/leaflet.css">
+<link rel="modulepreload" href="./_observablehq/client.cc88242f.js">
+<link rel="modulepreload" href="./_observablehq/runtime.607a8173.js">
+<link rel="modulepreload" href="./_observablehq/stdlib.277aeab8.js">
+<link rel="modulepreload" href="./_npm/d3-hexbin@0.2.2/fa7957ce.js">
+<link rel="modulepreload" href="./_npm/d3@7.9.0/66d82917.js">
+<link rel="modulepreload" href="./_npm/htl@0.3.1/72f4716c.js">
+<link rel="modulepreload" href="./_observablehq/stdlib/inputs.31cd1366.js">
+<link rel="modulepreload" href="./_npm/leaflet@1.9.4/721623d8.js">
+<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.17/a96a6bbb.js">
+<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/9cffc2bd.js">
+<link rel="modulepreload" href="./_npm/isoformat@0.2.1/18cbf477.js">
+<link rel="modulepreload" href="./_npm/d3-array@3.2.4/e93ca09f.js">
+<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/0f2de24d.js">
+<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/65eb105b.js">
+<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/7ef8fb2e.js">
+<link rel="modulepreload" href="./_npm/d3-color@3.1.0/aeb57b94.js">
+<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/1d2aed74.js">
+<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/87adea64.js">
+<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/9ba9c7f3.js">
+<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/4202580c.js">
+<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/cdd7e898.js">
+<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/b4e2ad9a.js">
+<link rel="modulepreload" href="./_npm/d3-force@3.0.0/5e804d15.js">
+<link rel="modulepreload" href="./_npm/d3-format@3.1.2/3785bf2d.js">
+<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/40599fb3.js">
+<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/e49e792c.js">
+<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/8d1e5425.js">
+<link rel="modulepreload" href="./_npm/d3-path@3.1.0/20d3f133.js">
+<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/7553081f.js">
+<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/0dfd751c.js">
+<link rel="modulepreload" href="./_npm/d3-random@3.0.1/3c90ee06.js">
+<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/720b7f0a.js">
+<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/ba24c2e7.js">
+<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/4d94e5b7.js">
+<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/6d3a6726.js">
+<link rel="modulepreload" href="./_npm/d3-time@3.1.0/9f03c579.js">
+<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/07c9626f.js">
+<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/b58a267d.js">
+<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/004da2ac.js">
+<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/b5786b3f.js">
+<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/53fe8176.js">
+<link rel="modulepreload" href="./_npm/internmap@2.0.3/e08981d9.js">
+<link rel="modulepreload" href="./_npm/delaunator@5.1.0/d4ec0aa1.js">
+<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/cbf6ba23.js">
+<link rel="modulepreload" href="./_npm/robust-predicates@3.0.3/42820bfa.js">
+<script type="module">
+
+import {define} from "./_observablehq/client.cc88242f.js";
+import {registerFile} from "./_observablehq/stdlib.277aeab8.js";
+
+registerFile("./assets/logos/logos/atleticos.png", {"name":"./assets/logos/logos/atleticos.png","mimeType":"image/png","path":"./_file/assets/logos/logos/atleticos.8f0dea46.png","lastModified":1779042284405,"size":35094});
+registerFile("./assets/logos/logos/cangrejeros.png", {"name":"./assets/logos/logos/cangrejeros.png","mimeType":"image/png","path":"./_file/assets/logos/logos/cangrejeros.eef95da6.png","lastModified":1779042284406,"size":13345});
+registerFile("./assets/logos/logos/capitanes.png", {"name":"./assets/logos/logos/capitanes.png","mimeType":"image/png","path":"./_file/assets/logos/logos/capitanes.9182c921.png","lastModified":1779042284406,"size":19074});
+registerFile("./assets/logos/logos/criollos.png", {"name":"./assets/logos/logos/criollos.png","mimeType":"image/png","path":"./_file/assets/logos/logos/criollos.f7e2318a.png","lastModified":1779042284407,"size":28581});
+registerFile("./assets/logos/logos/gigantes.png", {"name":"./assets/logos/logos/gigantes.png","mimeType":"image/png","path":"./_file/assets/logos/logos/gigantes.2e64de7b.png","lastModified":1779042284407,"size":9736});
+registerFile("./assets/logos/logos/indios.png", {"name":"./assets/logos/logos/indios.png","mimeType":"image/png","path":"./_file/assets/logos/logos/indios.8ec203f9.png","lastModified":1779042284408,"size":42534});
+registerFile("./assets/logos/logos/leones.png", {"name":"./assets/logos/logos/leones.png","mimeType":"image/png","path":"./_file/assets/logos/logos/leones.a1b4e6cf.png","lastModified":1779042284408,"size":41138});
+registerFile("./assets/logos/logos/mets.png", {"name":"./assets/logos/logos/mets.png","mimeType":"image/png","path":"./_file/assets/logos/logos/mets.f2a31631.png","lastModified":1779042284409,"size":34048});
+registerFile("./assets/logos/logos/osos.png", {"name":"./assets/logos/logos/osos.png","mimeType":"image/png","path":"./_file/assets/logos/logos/osos.47de18df.png","lastModified":1779042284409,"size":35065});
+registerFile("./assets/logos/logos/piratas.png", {"name":"./assets/logos/logos/piratas.png","mimeType":"image/png","path":"./_file/assets/logos/logos/piratas.1f1d0c8d.png","lastModified":1779042284410,"size":25768});
+registerFile("./assets/logos/logos/santeros.png", {"name":"./assets/logos/logos/santeros.png","mimeType":"image/png","path":"./_file/assets/logos/logos/santeros.2ecf6667.png","lastModified":1779042284411,"size":30776});
+registerFile("./assets/logos/logos/vaqueros.png", {"name":"./assets/logos/logos/vaqueros.png","mimeType":"image/png","path":"./_file/assets/logos/logos/vaqueros.f11f634e.png","lastModified":1779042284411,"size":18030});
+registerFile("./data/combined/bsn_pbp_all.csv", {"name":"./data/combined/bsn_pbp_all.csv","mimeType":"text/csv","path":"./_file/data/combined/bsn_pbp_all.c21d6de9.csv","lastModified":1779161599815,"size":28541767});
+registerFile("./data/efficiency_snapshots.csv", {"name":"./data/efficiency_snapshots.csv","mimeType":"text/csv","path":"./_file/data/efficiency_snapshots.11386917.csv","lastModified":1779041733666,"size":73703});
+registerFile("./player_photos/Moses_Brown.webp", {"name":"./player_photos/Moses_Brown.webp","mimeType":"image/webp","path":"./_file/player_photos/Moses_Brown.ab5d60c7.webp","lastModified":1779219875016,"size":124144});
+registerFile("./player_photos/crowder.png", {"name":"./player_photos/crowder.png","mimeType":"image/png","path":"./_file/player_photos/crowder.cec7bf91.png","lastModified":1779219875018,"size":96299});
+registerFile("./player_photos/harrison.png", {"name":"./player_photos/harrison.png","mimeType":"image/png","path":"./_file/player_photos/harrison.5fe2ae89.png","lastModified":1779219875024,"size":241961});
+registerFile("./player_photos/munson.png", {"name":"./player_photos/munson.png","mimeType":"image/png","path":"./_file/player_photos/munson.1b5a45b0.png","lastModified":1779219875028,"size":111343});
+registerFile("./player_photos/nowell.png", {"name":"./player_photos/nowell.png","mimeType":"image/png","path":"./_file/player_photos/nowell.683e6546.png","lastModified":1779219875031,"size":287428});
+registerFile("./player_photos/robinson.png.avif", {"name":"./player_photos/robinson.png.avif","mimeType":"image/avif","path":"./_file/player_photos/robinson.png.2e565665.avif","lastModified":1779219875032,"size":117058});
+registerFile("./player_photos/sobey.png", {"name":"./player_photos/sobey.png","mimeType":"image/png","path":"./_file/player_photos/sobey.63749e8f.png","lastModified":1779219875035,"size":217282});
+registerFile("./player_photos/tremont.png", {"name":"./player_photos/tremont.png","mimeType":"image/png","path":"./_file/player_photos/tremont.af847493.png","lastModified":1779219875036,"size":441781});
+registerFile("./player_photos/tyson.png.avif", {"name":"./player_photos/tyson.png.avif","mimeType":"image/avif","path":"./_file/player_photos/tyson.png.071efc3b.avif","lastModified":1779219875038,"size":64330});
+
+define({id: "412d35a3", inputs: ["FileAttachment"], outputs: ["data"], body: async (FileAttachment) => {
+const data = await FileAttachment("./data/efficiency_snapshots.csv").csv({typed: true})
+return {data};
+}});
+
+define({id: "22ad7f01", inputs: ["FileAttachment"], outputs: ["pbp"], body: async (FileAttachment) => {
+const pbp = await FileAttachment("./data/combined/bsn_pbp_all.csv").csv({typed: true})
+return {pbp};
+}});
+
+define({id: "80fe0d61", outputs: ["d3hexbin"], body: async () => {
+const {hexbin: d3hexbin} = await import("./_npm/d3-hexbin@0.2.2/fa7957ce.js");
+
+return {d3hexbin};
+}});
+
+define({id: "bdd860f3", inputs: ["html"], outputs: ["DASHBOARD_WIDTH","CHART_HEIGHT"], body: (html) => {
+const DASHBOARD_WIDTH = 980
+const CHART_HEIGHT = 700
+
+html`<style>
+body {
+  background: #000000;
+}
+
+.hero {
+  max-width: 980px;
+  margin: 32px 0 26px 0;
+}
+
+.hero .eyebrow {
+  color:#8fb3ff;
+  font-size:13px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1.8px;
+  margin-bottom:8px;
+}
+
+.hero h1 {
+  font-size:44px;
+  margin:0;
+  color:#f5f1e8;
+  letter-spacing:-1px;
+}
+
+.hero p {
+  color:#b8b8b8;
+  font-size:15px;
+  margin-top:10px;
+}
+
+.control-panel {
+  width: 320px;
+  padding: 18px;
+  margin-bottom: 28px;
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.25);
+}
+</style>`
+return {DASHBOARD_WIDTH,CHART_HEIGHT};
+}});
+
+define({id: "313ac660", inputs: ["html","DASHBOARD_WIDTH"], outputs: ["chartCard"], body: (html,DASHBOARD_WIDTH) => {
+function chartCard(node, title = "") {
+  return html`
+    <div style="
+      width:${DASHBOARD_WIDTH}px;
+      margin: 0 0 28px 0;
+      background:linear-gradient(180deg, #121212, #0b0b0b);
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid rgba(0, 0, 0, 0.12);
+      box-shadow:0 24px 70px rgba(0,0,0,0.38);
+    ">
+      ${title ? html`<div style="
+        padding:20px 26px 14px 26px;
+        color:#f8f8f8;
+        font-family:Inter, system-ui, sans-serif;
+        font-size:34px;
+        font-weight:900;
+        border-bottom:1px solid rgba(0, 0, 0, 0.08);
+      ">${title}</div>` : ""}
+      ${node}
+    </div>
+  `
+}
+return {chartCard};
+}});
+
+define({id: "8330b48f", inputs: ["html","display"], body: async (html,display) => {
+display(await(
+html`
+<div class="hero">
+  
+  <h1>BSN: DASHBOARD DE ANALISIS AVANZADO</h1>
+  <p>Tendencias, eficiencia, perfiles ofensivos / defensivos y patrones de tiro.</p>
+</div>
+`
+))
+}});
+
+define({id: "6dd19dc2", inputs: ["d3","pbp","teamIdMap"], outputs: ["playerTeamFromEvents"], body: (d3,pbp,teamIdMap) => {
+const playerTeamFromEvents = new Map(
+  Array.from(
+    d3.rollup(
+      pbp
+        .filter(d => d.player && d.team_id)
+        .map(d => ({
+          player: String(d.player).trim(),
+          team: teamIdMap[String(d.team_id).trim()]
+        }))
+        .filter(d => d.player && d.team),
+      v => d3.greatest(
+        Array.from(d3.rollup(v, g => g.length, d => d.team)),
+        d => d[1]
+      )?.[0],
+      d => d.player
+    )
+  )
+)
+return {playerTeamFromEvents};
+}});
+
+define({id: "ad8aacd5", inputs: ["FileAttachment"], outputs: ["logoMap"], body: async (FileAttachment) => {
+const logoMap = {
+  Atleticos: await FileAttachment("./assets/logos/logos/atleticos.png").url(),
+  Cangrejeros: await FileAttachment("./assets/logos/logos/cangrejeros.png").url(),
+  Capitanes: await FileAttachment("./assets/logos/logos/capitanes.png").url(),
+  Criollos: await FileAttachment("./assets/logos/logos/criollos.png").url(),
+  Gigantes: await FileAttachment("./assets/logos/logos/gigantes.png").url(),
+  Indios: await FileAttachment("./assets/logos/logos/indios.png").url(),
+  Leones: await FileAttachment("./assets/logos/logos/leones.png").url(),
+  Mets: await FileAttachment("./assets/logos/logos/mets.png").url(),
+  Osos: await FileAttachment("./assets/logos/logos/osos.png").url(),
+  Piratas: await FileAttachment("./assets/logos/logos/piratas.png").url(),
+  Santeros: await FileAttachment("./assets/logos/logos/santeros.png").url(),
+  Vaqueros: await FileAttachment("./assets/logos/logos/vaqueros.png").url()
+}
+return {logoMap};
+}});
+
+define({id: "82f32cd1", outputs: ["teamKey"], body: () => {
+function teamKey(x) {
+  const map = {
+    atleticos: "Atleticos",
+    cangrejeros: "Cangrejeros",
+    capitanes: "Capitanes",
+    criollos: "Criollos",
+    gigantes: "Gigantes",
+    indios: "Indios",
+    leones: "Leones",
+    mets: "Mets",
+    osos: "Osos",
+    piratas: "Piratas",
+    santeros: "Santeros",
+    vaqueros: "Vaqueros"
+  }
+
+  return map[String(x).trim().toLowerCase()] ?? String(x).trim()
+}
+return {teamKey};
+}});
+
+define({id: "33318aea", outputs: ["teamColors","teamIdMap"], body: () => {
+const teamColors = {
+  Atleticos: {edge: "#d9a57a", fill: "#f5eee7", num_fill: "#d9a57a"},
+  Cangrejeros: {edge: "#d0837c", fill: "#f6eded", num_fill: "#d0837c"},
+  Capitanes: {edge: "#d4c97f", fill: "#f6f3e6", num_fill: "#d4c97f"},
+  Criollos: {edge: "#c8a4d6", fill: "#f3edf7", num_fill: "#c8a4d6"},
+  Gigantes: {edge: "#db8b80", fill: "#eef4f8", num_fill: "#db8b80"},
+  Indios: {edge: "#8fbf93", fill: "#edf5ee", num_fill: "#8fbf93"},
+  Leones: {edge: "#c18a8a", fill: "#f6eeee", num_fill: "#c18a8a"},
+  Mets: {edge: "#9a9ccf", fill: "#f1f2f8", num_fill: "#9a9ccf"},
+  Osos: {edge: "#9bbbd6", fill: "#f2f6fa", num_fill: "#9bbbd6"},
+  Piratas: {edge: "#c18a8a", fill: "#f2f2f2", num_fill: "#c18a8a"},
+  Santeros: {edge: "#8fc7a8", fill: "#edf6f1", num_fill: "#8fc7a8"},
+  Vaqueros: {edge: "#8fa7d6", fill: "#eef1f8", num_fill: "#8fa7d6"}
+}
+
+const teamIdMap = {
+  "dc146667-ca01-11f0-b8f7-f757259004eb": "Cangrejeros",
+  "dc54d8e6-ca01-11f0-af0f-f757259004eb": "Capitanes",
+  "dc35679f-ca01-11f0-9c8c-f757259004eb": "Criollos",
+  "dc2c5655-ca01-11f0-829a-f757259004eb": "Leones",
+  "dc30e5a1-ca01-11f0-a8cb-f757259004eb": "Mets",
+  "dd7ef1c3-ca01-11f0-8519-f757259004eb": "Gigantes",
+  "ddbcad03-ca01-11f0-a8f1-f757259004eb": "Indios",
+  "dc1df5c4-ca01-11f0-a0db-f757259004eb": "Osos",
+  "dc7d3057-ca01-11f0-a43c-f757259004eb": "Santeros",
+  "dc3a3733-ca01-11f0-a291-f757259004eb": "Vaqueros",
+  "dc22ec82-ca01-11f0-9659-f757259004eb": "Piratas",
+  "dd2b6bc8-ca01-11f0-83cd-f757259004eb": "Atleticos"
+}
+return {teamColors,teamIdMap};
+}});
+
+define({id: "644bf312", inputs: ["playerTeamFromEvents","teamIdMap"], outputs: ["playerTeamMap","pbpTeam"], body: (playerTeamFromEvents,teamIdMap) => {
+const playerTeamMap = {
+  "Luis Rivera Rosario": "Criollos",
+  "Hiram Huertas": "Criollos",
+  "Richard Nunez": "Criollos",
+  "Anthony Morales": "Criollos",
+  "Moses Brown": "Criollos",
+  "Michael O Connell": "Criollos",
+  "Jeff Early Jr.": "Criollos",
+  "Alexander Kappos": "Criollos",
+  "Christian Lopez Santiago": "Criollos",
+  "Travis Trice": "Criollos",
+  "Louis King": "Criollos",
+
+  "Nick Perkins": "Atleticos",
+  "Jorge L. Pacheco": "Atleticos",
+  "Andre Curbelo": "Atleticos",
+  "Montrezl Harrell": "Atleticos",
+  "Marlon Hargis": "Atleticos",
+  "Christian Pizarro Rios": "Atleticos",
+  "Onzie Branch": "Atleticos",
+  "Antonio Gordon": "Atleticos",
+  "George Alexander Hamilton": "Atleticos",
+  "Jorge Luis Torres": "Atleticos",
+  "Kyle Rose": "Atleticos",
+  
+  "Malik Beasley": "Cangrejeros",
+  "Isaiah Pineiro": "Cangrejeros",
+  "Angel Matias": "Cangrejeros",
+  "Corey McKeithan": "Cangrejeros",
+  "Angel Rodriguez": "Cangrejeros",
+  "Emmanuel Maldonado": "Cangrejeros",
+  "Walter Hodge Jr.": "Cangrejeros",
+  "Devon Collier": "Cangrejeros",
+  "Davon Jefferson": "Cangrejeros",
+  "David Huertas": "Cangrejeros",
+  "Jordan Howard": "Cangrejeros",
+  "Ian Clark": "Cangrejeros",
+
+
+  "Jack Edward McVeigh": "Capitanes",
+  "Rarael A. Pinzon Duperoy": "Capitanes",
+  "Felix A. Rivera Vega": "Capitanes",
+  "Ramses J. Melendez Vega": "Capitanes",
+  "Diego Gonzalez Pellot": "Capitanes",
+  "Justin Reyes": "Capitanes",
+  "Derrick Walton": "Capitanes",
+  "Juan Pablo Pineiro": "Capitanes",
+  "Timothy Soares": "Capitanes",
+  "Emmanuel Andujar": "Capitanes",
+  "Jonathan Zhao Olmos": "Capitanes",
+
+  "Tremont Waters": "Gigantes",
+  "Hunter Tyson": "Gigantes",
+  "Jaylen Nowell": "Gigantes",
+  "Daniel Rivera": "Gigantes",
+  "Evander Ortiz Colon": "Gigantes",
+  "Jesus A. Cruz Galarza": "Gigantes",
+  "Isaac Sosa": "Gigantes",
+  "Timajh Parker": "Gigantes",
+  "George Conditt IV": "Gigantes",
+  "Alexander Franklin": "Gigantes",
+  "David Scott James Jr": "Gigantes",
+
+  "Nathan Sobey": "Indios",
+  "Sam Waardenburg": "Indios",
+  "Josue Erazo": "Indios",
+  "Ruben Cotto": "Indios",
+  "Luis D. Cuascut": "Indios",
+  "Tyrell Harrison": "Indios",
+  "Jared Ruiz": "Indios",
+  "Neftali Alvarez": "Indios",
+  "Thomas Robinson": "Indios",
+  
+  "Johned Walker": "Leones",
+  "Jordan Murphy": "Leones",
+  "Christian M. Negron": "Leones",
+  "Jezreel De Jesus": "Leones",
+  "Alejandro Vazquez": "Leones",
+  "Jalen Bernard Crutcher": "Leones",
+  "Isaiah Hicks": "Leones",
+  "Terrence Davis": "Leones",
+  "Darius Bazley": "Leones",
+  "Brady Manek": "Leones",
+  "Tjader Fernandez": "Leones",
+
+  "Devin Williams": "Mets",
+  "Brandon Knight": "Mets",
+  "Ysmael Romero": "Mets",
+  "Theophilus A. Pinson Jr.": "Mets",
+  "Jaysean Paige": "Mets",
+  "Brandon Boyd": "Mets",
+  "Torrey Craig": "Mets",
+  "Janiel Jafet Romer": "Mets",
+  "Kevin Maura Colon": "Mets",
+  "Eric Ayala": "Mets",
+  "Wilfredo Rodriguez Valentin": "Mets",
+  "Maxwel Abmas": "Mets",
+ 
+  "Kendric Davis": "Osos",
+  "Olumiye Oni": "Osos",
+  "Tyquan Rolon": "Osos",
+  "Tyler Davis": "Osos",
+  "Raymond Cintron Jr.": "Osos",
+  "Tyler Cook": "Osos",
+  "Michael J. Bruesewitz": "Osos",
+  "E.J. Crawford": "Osos",
+  "Jonathan Rodriguez": "Osos",
+  "Alex Abreu": "Osos",
+  "Chris Ortiz": "Osos",
+  "Ryan Arcidiacono": "Osos",
+  "Jamil Wilson": "Osos",
+  "Giovanni Santiago": "Osos",
+  "Kristian Doolittle": "Osos",
+  
+  "Emmanuel Mudiay": "Piratas",
+  "Victor Liz": "Piratas",
+  "Carlos Emory": "Piratas",
+  "Reinaldo Santana": "Piratas",
+  "Derek Reese": "Piratas",
+  "Jayden Martinez": "Piratas",
+  "Jay Shawn Alvarez": "Piratas",
+  "Phillip Wheeler": "Piratas",
+  "Dimencio Vaughn": "Piratas",
+  "Jameer Nelson Jr": "Piratas",
+  "Kendall Munson": "Piratas",
+  "William Cruz Rodriguez": "Piratas",
+  "Grant Basile": "Piratas",
+  "Zhaire Jahi-Ihme Smith": "Piratas",
+
+
+
+  "Antonio Ralat": "Santeros",
+  "Rigoberto Mendoza": "Santeros",
+  "Ivan Gandia": "Santeros",
+  "Matthew Lee": "Santeros",
+  "Manuel Camper": "Santeros",
+  "Giancarlo Rosado": "Santeros",
+  "Robiel Morales": "Santeros",
+  "Leandro Allende": "Santeros",
+  "John Brown III": "Santeros",
+  "Jacob Wiley": "Santeros",
+  "John Holland": "Santeros",
+  "Admiral Schofield": "Santeros",
+  "Noah Horchler": "Santeros",
+
+  "Javier Mojica": "Vaqueros",
+  "Renaldo Balkman": "Vaqueros",
+  "Javier Ezquerra": "Vaqueros",
+  "Isaiah Palermo": "Vaqueros",
+  "Gary Browne": "Vaqueros",
+  "Corey Jae Crowder": "Vaqueros",
+  "Jordan Daniel Cintron": "Vaqueros",
+  "Luis Hernandez": "Vaqueros",
+  "Jaylin Galloway": "Vaqueros",
+  "Xavier Cooks": "Vaqueros",
+  "Khary Mauras": "Vaqueros",
+  "Stephen Thompson Jr.": "Vaqueros",
+}
+
+function pbpTeam(d) {
+  const player = String(d.player ?? "").trim()
+
+  const manualFix = playerTeamMap[player]
+  if (manualFix) return manualFix
+
+  const majorityTeam = playerTeamFromEvents.get(player)
+  if (majorityTeam) return majorityTeam
+
+  return teamIdMap[String(d.team_id).trim()] ?? null
+}
+return {playerTeamMap,pbpTeam};
+}});
+
+define({id: "62337bc7", inputs: ["FileAttachment","logoMap"], outputs: ["playerPhotoMap","getPlayerPhoto"], body: async (FileAttachment,logoMap) => {
+const playerPhotoMap = {
+  "Corey Jae Crowder": await FileAttachment("./player_photos/crowder.png").url(),
+  "Hunter Tyson": await FileAttachment("./player_photos/tyson.png.avif").url(),
+  "Tremont Waters": await FileAttachment("./player_photos/tremont.png").url(),
+  "Nathan Sobey": await FileAttachment("./player_photos/sobey.png").url(),
+  "Jaylen Nowell": await FileAttachment("./player_photos/nowell.png").url(),
+  "Tyrell Harrison": await FileAttachment("./player_photos/harrison.png").url(),
+  "Kendall Munson": await FileAttachment("./player_photos/munson.png").url(),
+  "Thomas Robinson": await FileAttachment("./player_photos/robinson.png.avif").url(),
+  "Moses Brown": await FileAttachment("./player_photos/Moses_Brown.webp").url()
+}
+
+function getPlayerPhoto(playerName, rows = [], team = null) {
+  if (playerPhotoMap[playerName]) return playerPhotoMap[playerName]
+
+  const urlFromData = rows
+    .map(d => d.personImage)
+    .find(d =>
+      d &&
+      String(d).startsWith("http") &&
+      !String(d).includes(".avif")
+    )
+
+  if (urlFromData) return urlFromData
+
+  if (team && logoMap[team]) return logoMap[team]
+
+  return null
+}
+return {playerPhotoMap,getPlayerPhoto};
+}});
+
+define({id: "0bbe08b9", outputs: ["teamLocations"], body: () => {
+// ===============================
+// V1 — BSN PUERTO RICO TEAM MAP
+// ===============================
+
+const teamLocations = [
+  { TEAM: "Capitanes", CITY: "Arecibo", LATITUDE: 18.4724, LONGITUDE: -66.7157 },
+  { TEAM: "Vaqueros", CITY: "Bayamón", LATITUDE: 18.3986, LONGITUDE: -66.1557 },
+  { TEAM: "Cangrejeros", CITY: "Santurce", LATITUDE: 18.4397, LONGITUDE: -66.0596 },
+  { TEAM: "Mets", CITY: "Guaynabo", LATITUDE: 18.3575, LONGITUDE: -66.1110 },
+  { TEAM: "Leones", CITY: "Ponce", LATITUDE: 18.0111, LONGITUDE: -66.6141 },
+  { TEAM: "Piratas", CITY: "Quebradillas", LATITUDE: 18.4738, LONGITUDE: -66.9385 },
+  { TEAM: "Indios", CITY: "Mayagüez", LATITUDE: 18.2011, LONGITUDE: -67.1396 },
+  { TEAM: "Atleticos", CITY: "San Germán", LATITUDE: 18.0807, LONGITUDE: -67.0410 },
+  { TEAM: "Criollos", CITY: "Caguas", LATITUDE: 18.2341, LONGITUDE: -66.0485 },
+  { TEAM: "Osos", CITY: "Manatí", LATITUDE: 18.4275, LONGITUDE: -66.4921 },
+  { TEAM: "Gigantes", CITY: "Carolina", LATITUDE: 18.3808, LONGITUDE: -65.9574 },
+  { TEAM: "Santeros", CITY: "Aguada", LATITUDE: 18.3794, LONGITUDE: -67.1882 }
+]
+return {teamLocations};
+}});
+
+define({id: "41004ca8", outputs: ["successBool","getPlotCoords"], body: () => {
+function successBool(x) {
+  return ["true", "1", "made", "yes"].includes(String(x).toLowerCase())
+}
+
+function getPlotCoords(d) {
+  let rawX = +d.x
+  let rawY = +d.y
+
+  let plotX = rawY
+  let plotY = rawX
+
+  if (plotY < 50) {
+    plotX = 100 - plotX
+    plotY = 100 - plotY
+  }
+
+  plotY = plotY - 50
+  plotY = 50 - plotY
+
+  plotX = plotX / 2
+  plotY = plotY * (47 / 50)
+
+  return {plotX, plotY}
+}
+return {successBool,getPlotCoords};
+}});
+
+define({id: "e0477970", inputs: ["playerTeamMap","Inputs","Generators"], outputs: ["shotTeams","shotTeamInput","shotTeam"], body: (playerTeamMap,Inputs,Generators) => {
+const shotTeams = Array.from(
+  new Set(Object.values(playerTeamMap))
+).sort()
+
+const shotTeamInput = Inputs.select(shotTeams, {
+  label: "Shot Chart Team",
+  value: "Atleticos"
+})
+
+const shotTeam = Generators.input(shotTeamInput)
+return {shotTeams,shotTeamInput,shotTeam};
+}});
+
+define({id: "7520ed88", inputs: ["Inputs","playerTeamMap","shotTeam","Generators"], outputs: ["shotPlayerInput","shotPlayer"], body: (Inputs,playerTeamMap,shotTeam,Generators) => {
+const shotPlayerInput = Inputs.select(
+  Object.entries(playerTeamMap)
+    .filter(([player, team]) => team === shotTeam)
+    .map(([player]) => player)
+    .sort(),
+  { label: "Shot Chart Player" }
+)
+
+const shotPlayer = Generators.input(shotPlayerInput)
+return {shotPlayerInput,shotPlayer};
+}});
+
+define({id: "8aeee626", inputs: ["pbp","shotPlayer","shotTeam","getPlotCoords","successBool"], outputs: ["playerShots"], body: (pbp,shotPlayer,shotTeam,getPlotCoords,successBool) => {
+const playerShots = pbp
+  .filter(d =>
+    ["2pt", "3pt"].includes(String(d.event_type).toLowerCase()) &&
+    d.x != null &&
+    d.y != null &&
+    String(d.player).trim() === shotPlayer &&
+    String(d.matchup ?? "").toLowerCase().includes(shotTeam.toLowerCase())
+  )
+  .map(d => ({
+    ...d,
+    ...getPlotCoords(d),
+    made: successBool(d.success)
+  }))
+return {playerShots};
+}});
+
+define({id: "a900d1b9", inputs: ["playerShots","d3"], outputs: ["shotStats"], body: (playerShots,d3) => {
+const shotStats = (() => {
+  const attempts = playerShots.length
+  const makes = d3.sum(playerShots, d => d.made ? 1 : 0)
+  const fg = attempts ? makes / attempts : 0
+
+  const paint = playerShots.filter(d =>
+    d.plotX >= 17 && d.plotX <= 33 && d.plotY <= 19
+  )
+
+  const mid = playerShots.filter(d =>
+    d.event_type === "2pt" &&
+    !(d.plotX >= 17 && d.plotX <= 33 && d.plotY <= 19)
+  )
+
+  const threes = playerShots.filter(d => d.event_type === "3pt")
+
+  return {
+    attempts,
+    makes,
+    fg,
+    paintMade: d3.sum(paint, d => d.made ? 1 : 0),
+    paintAtt: paint.length,
+    midMade: d3.sum(mid, d => d.made ? 1 : 0),
+    midAtt: mid.length,
+    threeMade: d3.sum(threes, d => d.made ? 1 : 0),
+    threeAtt: threes.length
+  }
+})()
+return {shotStats};
+}});
+
+define({id: "c45bf9c0", outputs: ["drawCourt"], body: () => {
+function drawCourt(g, x, y) {
+  const LINE = "#6F7278"
+
+  g.append("rect")
+    .attr("x", x(0))
+    .attr("y", y(47))
+    .attr("width", x(50) - x(0))
+    .attr("height", y(0) - y(47))
+    .attr("fill", "none")
+    .attr("stroke", LINE)
+    .attr("stroke-width", 1.4)
+
+  g.append("rect")
+    .attr("x", x(17))
+    .attr("y", y(19))
+    .attr("width", x(33) - x(17))
+    .attr("height", y(0) - y(19))
+    .attr("fill", "none")
+    .attr("stroke", LINE)
+    .attr("stroke-width", 1.3)
+
+  g.append("line")
+    .attr("x1", x(22))
+    .attr("x2", x(28))
+    .attr("y1", y(3.2))
+    .attr("y2", y(3.2))
+    .attr("stroke", "#F2F2F2")
+    .attr("stroke-width", 1.5)
+
+  g.append("circle")
+    .attr("cx", x(25))
+    .attr("cy", y(4))
+    .attr("r", 6)
+    .attr("fill", "none")
+    .attr("stroke", "#F2F2F2")
+    .attr("stroke-width", 1.3)
+
+    const hoop = {x: 25, y: 4}
+    const threeR = 23.75
+    const leftCornerX = 3
+    const rightCornerX = 47
+
+    const yCorner = hoop.y + Math.sqrt(
+    threeR ** 2 - (hoop.x - leftCornerX) ** 2
+    )
+
+    // corner lines
+    g.append("line")
+    .attr("x1", x(leftCornerX))
+    .attr("x2", x(leftCornerX))
+    .attr("y1", y(0))
+    .attr("y2", y(yCorner))
+    .attr("stroke", LINE)
+    .attr("stroke-width", 1.4)
+
+    g.append("line")
+    .attr("x1", x(rightCornerX))
+    .attr("x2", x(rightCornerX))
+    .attr("y1", y(0))
+    .attr("y2", y(yCorner))
+    .attr("stroke", LINE)
+    .attr("stroke-width", 1.4)
+
+    // arc
+    const arcRadius = x(hoop.x + threeR) - x(hoop.x)
+
+    const arcX1 = x(leftCornerX)
+    const arcY1 = y(yCorner)
+
+    const arcX2 = x(rightCornerX)
+    const arcY2 = y(yCorner)
+
+    g.append("path")
+    .attr(
+        "d",
+        `M ${arcX1} ${arcY1}
+        A ${arcRadius} ${arcRadius} 0 0 1 ${arcX2} ${arcY2}`
+    )
+    .attr("fill", "none")
+    .attr("stroke", LINE)
+    .attr("stroke-width", 1.4)
+}
+return {drawCourt};
+}});
+
+define({id: "d6a91ce3", outputs: ["shortPlayerName"], body: () => {
+function shortPlayerName(name) {
+  const parts = String(name).trim().split(/\s+/)
+
+  if (parts.length <= 1) return name
+
+  const lastName = parts[parts.length - 1]
+
+  return `${parts[0][0]}. ${lastName}`
+}
+return {shortPlayerName};
+}});
+
+define({id: "92f6a671", inputs: ["teamColors","shotTeam","logoMap","getPlayerPhoto","shotPlayer","playerShots","d3","shortPlayerName","shotStats","drawCourt","d3hexbin"], outputs: ["shotChart"], body: (teamColors,shotTeam,logoMap,getPlayerPhoto,shotPlayer,playerShots,d3,shortPlayerName,shotStats,drawCourt,d3hexbin) => {
+const shotChart = (() => {
+  const width = 620
+  const height = 720
+
+  const style = teamColors[shotTeam] ?? {edge: "#d9a57a", fill: "#f5eee7"}
+  const STRONG = style.edge
+  const LIGHT = style.fill
+  const logo = logoMap[shotTeam]
+  const playerPhoto = getPlayerPhoto(shotPlayer, playerShots, shotTeam)
+
+  const svg = d3.create("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .style("background", LIGHT)
+    .style("font-family", "Inter, system-ui, sans-serif")
+
+  svg.append("rect")
+    .attr("x", 18)
+    .attr("y", 18)
+    .attr("width", width - 36)
+    .attr("height", height - 36)
+    .attr("fill", LIGHT)
+    .attr("stroke", STRONG)
+    .attr("stroke-width", 2.5)
+
+  // header card
+  svg.append("rect")
+    .attr("x", 45)
+    .attr("y", 65)
+    .attr("width", width - 90)
+    .attr("height", 88)
+    .attr("fill", LIGHT)
+    .attr("stroke", STRONG)
+    .attr("stroke-width", 1.5)
+
+  svg.append("rect")
+    .attr("x", width - 170)
+    .attr("y", 65)
+    .attr("width", 125)
+    .attr("height", 88)
+    .attr("fill", STRONG)
+
+  svg.append("rect")
+    .attr("x", 58)
+    .attr("y", 73)
+    .attr("width", 74)
+    .attr("height", 74)
+    .attr("fill", LIGHT)
+    .attr("stroke", STRONG)
+    .attr("stroke-width", 1.3)
+
+  svg.append("image")
+    .attr("href", playerPhoto)
+    .attr("x", 60)
+    .attr("y", 75)
+    .attr("width", 70)
+    .attr("height", 70)
+    .attr("preserveAspectRatio", "xMidYMid meet")
+
+  if (logo) {
+    svg.append("image")
+      .attr("href", logo)
+      .attr("x", width - 135)
+      .attr("y", 83)
+      .attr("width", 58)
+      .attr("height", 58)
+  }
+
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", 100)
+    .attr("text-anchor", "middle")
+    .attr("font-size", 27)
+    .attr("font-weight", 900)
+    .attr("letter-spacing", 2)
+    .attr("fill", "#111")
+    .text(shortPlayerName(shotPlayer).toUpperCase())
+
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", 126)
+    .attr("text-anchor", "middle")
+    .attr("font-size", 14)
+    .attr("fill", "#222")
+    .text(`${shotTeam}  |  ${shotStats.makes}/${shotStats.attempts} FG  |  ${(shotStats.fg * 100).toFixed(1)}% FG`)
+
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", 144)
+    .attr("text-anchor", "middle")
+    .attr("font-size", 11)
+    .attr("font-weight", 900)
+    .attr("fill", "#555")
+    .text(`PAINT: ${shotStats.paintMade}/${shotStats.paintAtt}  |  MID: ${shotStats.midMade}/${shotStats.midAtt}  |  3PT: ${shotStats.threeMade}/${shotStats.threeAtt}`)
+
+  // court panel
+  svg.append("rect")
+    .attr("x", 50)
+    .attr("y", 165)
+    .attr("width", width - 100)
+    .attr("height", 470)
+    .attr("fill", STRONG)
+
+  svg.append("rect")
+    .attr("x", 60)
+    .attr("y", 175)
+    .attr("width", width - 120)
+    .attr("height", 450)
+    .attr("fill", "#050505")
+
+  const court = svg.append("g")
+
+  const x = d3.scaleLinear().domain([0, 50]).range([65, width - 65])
+  const y = d3.scaleLinear().domain([0, 47]).range([615, 185])
+
+  drawCourt(court, x, y)
+
+  const hexSize = 15
+  const hexbin = d3hexbin()
+    .x(d => x(d.plotX))
+    .y(d => y(d.plotY))
+    .radius(hexSize)
+    .extent([[65, 185], [width - 65, 615]])
+
+  const bins = hexbin(playerShots)
+
+  const color = d3.scaleLinear()
+    .domain([0, 0.5, 1])
+    .range(["#2A2A2A", STRONG, "#FFFFFF"])
+
+  court.append("g")
+    .selectAll("path")
+    .data(bins)
+    .join("path")
+    .attr("d", hexbin.hexagon())
+    .attr("transform", d => `translate(${d.x},${d.y})`)
+    .attr("fill", d => color(d3.mean(d, s => s.made ? 1 : 0)))
+    .attr("stroke", "#111")
+    .attr("stroke-width", 0.7)
+    .attr("opacity", 0.96)
+
+  // legend
+  svg.append("text")
+    .attr("x", 90)
+    .attr("y", 210)
+    .attr("fill", "#D9D9D9")
+    .attr("font-size", 12)
+    .attr("font-weight", 900)
+    .text("DENSIDAD")
+
+  svg.append("circle")
+    .attr("cx", 95)
+    .attr("cy", 228)
+    .attr("r", 6)
+    .attr("fill", "#8F8F8F")
+    .attr("opacity", 0.65)
+
+  svg.append("text")
+    .attr("x", 108)
+    .attr("y", 232)
+    .attr("fill", "#BDBDBD")
+    .attr("font-size", 11)
+    .text("FALLADOS")
+
+  svg.append("circle")
+    .attr("cx", 165)
+    .attr("cy", 228)
+    .attr("r", 6)
+    .attr("fill", STRONG)
+    .attr("stroke", "white")
+    .attr("stroke-width", 0.5)
+
+  svg.append("text")
+    .attr("x", 178)
+    .attr("y", 232)
+    .attr("fill", "#BDBDBD")
+    .attr("font-size", 11)
+    .text("ENCESTADOS")
+
+  svg.append("text")
+    .attr("x", width - 190)
+    .attr("y", 210)
+    .attr("fill", "#D9D9D9")
+    .attr("font-size", 12)
+    .attr("font-weight", 900)
+    .text("EFICIENCIA FG%")
+
+  const gradId = `grad-${shotTeam.replace(/\s/g, "")}`
+  const defs = svg.append("defs")
+  const grad = defs.append("linearGradient")
+    .attr("id", gradId)
+    .attr("x1", "0%")
+    .attr("x2", "100%")
+
+  grad.append("stop").attr("offset", "0%").attr("stop-color", "#2A2A2A")
+  grad.append("stop").attr("offset", "55%").attr("stop-color", STRONG)
+  grad.append("stop").attr("offset", "100%").attr("stop-color", "#FFFFFF")
+
+  svg.append("rect")
+    .attr("x", width - 190)
+    .attr("y", 220)
+    .attr("width", 90)
+    .attr("height", 14)
+    .attr("fill", `url(#${gradId})`)
+
+  svg.append("text")
+    .attr("x", width - 190)
+    .attr("y", 250)
+    .attr("fill", "#8F8F8F")
+    .attr("font-size", 10)
+    .text("BAJA")
+
+  svg.append("text")
+    .attr("x", width - 100)
+    .attr("y", 250)
+    .attr("text-anchor", "end")
+    .attr("fill", "#F2F2F2")
+    .attr("font-size", 10)
+    .text("ALTA")
+
+  svg.append("text")
+    .attr("x", width / 2)
+    .attr("y", 670)
+    .attr("text-anchor", "middle")
+    .attr("fill", "#8A8A8A")
+    .attr("font-size", 14)
+    .text("Fuente: bsnpr.com | Por: @ajlytics")
+
+    return svg.node()
+})()
+
+return {shotChart};
+}});
+
+define({id: "8b66aafa", inputs: ["html","DASHBOARD_WIDTH","CHART_HEIGHT","L","logoMap","invalidation","chartCard"], outputs: ["renderBSNMap"], body: (html,DASHBOARD_WIDTH,CHART_HEIGHT,L,logoMap,invalidation,chartCard) => {
+function renderBSNMap(teamLocations, latestByTeam) {
+  const div = html`<div style="
+    width: ${DASHBOARD_WIDTH}px;
+    height: ${CHART_HEIGHT}px;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.18);
+  "></div>`;
+
+  const map = L.map(div, {
+    zoomControl: true,
+    scrollWheelZoom: true
+  }).setView([18.2208, -66.1901], 9);
+
+    L.tileLayer(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    {
+        attribution: 'Tiles © Esri'
+    }
+).addTo(map);
+
+  teamLocations.forEach(d => {
+    const logoUrl = logoMap[d.TEAM];
+    const stats = latestByTeam.get(d.TEAM);
+    const last5Record = stats?.LAST5_RECORD ?? "—";
+    const ppgL5 = stats?.PPG_L5 != null ? stats.PPG_L5.toFixed(1) : "—";
+    const oppgL5 = stats?.OPPG_L5 != null ? stats.OPPG_L5.toFixed(1) : "—";
+    const record = stats?.RECORD ?? "—";
+    const homeRecord = stats?.HOME_RECORD ?? "—";
+    const awayRecord = stats?.AWAY_RECORD ?? "—";
+    const offRank = stats?.OFF_RANK ?? "—";
+    const defRank = stats?.DEF_RANK ?? "—";
+    const netRank = stats?.NET_RANK ?? "—";
+
+    if (!logoUrl) {
+      console.warn("Missing logo for:", d.TEAM);
+      return;
+    }
+
+    const logoIcon = L.divIcon({
+      className: "bsn-logo-marker",
+      html: `
+        <div style="
+          width: 58px;
+          height: 58px;
+          border-radius: 50%;
+          background: rgba(255,255,255,0.92);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+          border: 2px solid rgba(255,255,255,0.95);
+        ">
+          <img src="${logoUrl}" style="
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+          ">
+        </div>
+      `,
+      iconSize: [58, 58],
+      iconAnchor: [29, 29],
+      popupAnchor: [0, -30]
+    });
+
+    L.marker([d.LATITUDE, d.LONGITUDE], {
+      icon: logoIcon
+    })
+      .addTo(map)
+      .bindPopup(`
+    <div style="
+        font-family: Inter, system-ui, sans-serif;
+        color: #111;
+        min-width: 210px;
+    ">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <img src="${logoUrl}" style="width:42px; height:42px; object-fit:contain;">
+        <div>
+            <div style="font-size:17px; font-weight:900;">${d.TEAM}</div>
+            <div style="font-size:13px; color:#555;">${d.CITY}, PR</div>
+        </div>
+        </div>
+
+        <div style="
+        border-top:1px solid rgba(0,0,0,0.12);
+        padding-top:10px;
+        font-size:13px;
+        line-height:1.55;
+        ">
+        <div><b>Record:</b> ${record}</div>
+        <div><b>Local:</b> ${homeRecord}</div>
+        <div><b>Visitante:</b> ${awayRecord}</div>
+        
+
+        <div style="height:8px;"></div>
+        <div style="
+        </div>
+        margin-top:10px;
+        border-top:1px solid rgba(0,0,0,0.08);
+        padding-top:10px;
+        ">
+
+        <div><b>Ult. 5:</b> ${last5Record}</div>
+        <div><b>PPJ U5:</b> ${ppgL5}</div>
+        <div><b>OPPJ U5:</b> ${oppgL5}</div>
+        <div style="
+        </div>
+        margin-top:10px;
+        border-top:1px solid rgba(0,0,0,0.08);
+        padding-top:10px;
+        ">
+        <div><b>Ofensiva:</b> #${offRank}</div>
+        <div><b>Defensa:</b> #${defRank}</div>
+        <div><b>Net:</b> #${netRank}</div>
+        </div>
+        </div>
+    `);
+    });
+
+  requestAnimationFrame(() => {
+    map.invalidateSize();
+  });
+
+  invalidation.then(() => map.remove());
+
+  return chartCard(div, "Mapa BSN")
+}
+
+return {renderBSNMap};
+}});
+
+define({id: "be304cc0", inputs: ["d3","data"], outputs: ["maxGame"], body: (d3,data) => {
+const maxGame = d3.max(data, d => d.TEAM_GAME_NUM)
+return {maxGame};
+}});
+
+define({id: "01834fc0", inputs: ["html","Event","maxGame","Generators"], outputs: ["makeGameSlider","gameSliderInput","gameSlider"], body: (html,Event,maxGame,Generators) => {
+function makeGameSlider(maxGame, initial = maxGame) {
+  const input = html`<input
+    type="range"
+    min="1"
+    max="${maxGame}"
+    step="1"
+    value="${initial}"
+    style="
+      width:260px;
+      accent-color:#8fb3ff;
+      cursor:pointer;
+      display:block;
+    "
+  >`
+
+  const label = html`<div style="
+    color:white;
+    font-size:13px;
+    font-weight:800;
+    margin-top:6px;
+  ">Game ${initial}</div>`
+
+  const wrapper = html`<div>${input}${label}</div>`
+
+  wrapper.value = +input.value
+
+  input.addEventListener("change", () => {
+  wrapper.value = +input.value
+  label.textContent = `Game ${input.value}`
+  wrapper.dispatchEvent(new Event("input", {bubbles: true}))
+})
+
+  return wrapper
+}
+
+const gameSliderInput = makeGameSlider(maxGame)
+
+const gameSlider = Generators.input(gameSliderInput)
+return {makeGameSlider,gameSliderInput,gameSlider};
+}});
+
+define({id: "86efc81e", inputs: ["data","gameSlider"], outputs: ["filtered"], body: (data,gameSlider) => {
+const filtered = data.filter(d => d.TEAM_GAME_NUM <= gameSlider)
+return {filtered};
+}});
+
+define({id: "9ed51cba", inputs: ["teamKey","d3"], outputs: ["buildPointDistribution"], body: (teamKey,d3) => {
+function buildPointDistribution(rows, mode = "Anotados") {
+  const isScored = mode === "Anotados"
+
+  const lookup = new Map(
+    rows.map(d => [`${d.GAME_ID}|${teamKey(d.TEAM)}`, d])
+  )
+
+  return Array.from(
+    d3.group(rows, d => teamKey(d.TEAM)),
+    ([team, teamRows]) => {
+      let sourceRows = teamRows
+
+      if (!isScored) {
+        sourceRows = teamRows
+          .map(d => lookup.get(`${d.GAME_ID}|${teamKey(d.OPPONENT)}`))
+          .filter(Boolean)
+      }
+
+      const pts = d3.sum(sourceRows, d => +d.PTS || 0)
+      const ptsFT = d3.sum(sourceRows, d => +d.FTM || 0)
+      const pts3 = d3.sum(sourceRows, d => (+d["3PM"] || 0) * 3)
+      const pts2 = Math.max(0, pts - ptsFT - pts3)
+
+      return {
+        TEAM: team,
+        PTS: pts,
+        PTS_2_PCT: pts ? pts2 / pts : 0,
+        PTS_FT_PCT: pts ? ptsFT / pts : 0,
+        PTS_3_PCT: pts ? pts3 / pts : 0
+      }
+    }
+  ).sort((a, b) => d3.descending(a.PTS_3_PCT, b.PTS_3_PCT))
+}
+return {buildPointDistribution};
+}});
+
+define({id: "9f4d0528", inputs: ["d3","filtered"], outputs: ["latestPerTeam"], body: (d3,filtered) => {
+const latestPerTeam = Array.from(
+  d3.group(filtered, d => d.TEAM),
+  ([team, rows]) => {
+    rows = rows.sort((a, b) => d3.ascending(a.TEAM_GAME_NUM, b.TEAM_GAME_NUM))
+
+    const row = rows[rows.length - 1]
+    const last5 = rows.slice(-5)
+
+    const l5Wins = d3.sum(last5, d => d.PTS > d.OPP_PTS ? 1 : 0)
+    const l5Losses = d3.sum(last5, d => d.PTS < d.OPP_PTS ? 1 : 0)
+
+    const wins = d3.sum(rows, d => d.PTS > d.OPP_PTS ? 1 : 0)
+    const losses = d3.sum(rows, d => d.PTS < d.OPP_PTS ? 1 : 0)
+
+    const homeRows = rows.filter(d => d.HOMEAWAY === 1 || d.HOMEAWAY === "1")
+    const awayRows = rows.filter(d => d.HOMEAWAY === 0 || d.HOMEAWAY === "0")
+
+    const homeWins = d3.sum(homeRows, d => d.PTS > d.OPP_PTS ? 1 : 0)
+    const homeLosses = d3.sum(homeRows, d => d.PTS < d.OPP_PTS ? 1 : 0)
+
+    const awayWins = d3.sum(awayRows, d => d.PTS > d.OPP_PTS ? 1 : 0)
+    const awayLosses = d3.sum(awayRows, d => d.PTS < d.OPP_PTS ? 1 : 0)
+
+    return {
+      ...row,
+      LAST5_RECORD: `${l5Wins}-${l5Losses}`,
+      PPG_L5: d3.mean(last5, d => d.PTS),
+      OPPG_L5: d3.mean(last5, d => d.OPP_PTS),
+      RECORD: `${wins}-${losses}`,
+      HOME_RECORD: `${homeWins}-${homeLosses}`,
+      AWAY_RECORD: `${awayWins}-${awayLosses}`
+    }
+  }
+)
+
+latestPerTeam.forEach(team => {
+  team.OFF_RANK =
+    1 + latestPerTeam.filter(d => d.ORTG_L5 > team.ORTG_L5).length
+
+  team.DEF_RANK =
+    1 + latestPerTeam.filter(d => d.DRTG_L5 < team.DRTG_L5).length
+
+  team.NET_RANK =
+    1 + latestPerTeam.filter(
+      d => (d.ORTG_L5 - d.DRTG_L5) >
+           (team.ORTG_L5 - team.DRTG_L5)
+    ).length
+})
+return {latestPerTeam};
+}});
+
+define({id: "cb39bb7c", inputs: ["latestPerTeam"], outputs: ["latestByTeam"], body: (latestPerTeam) => {
+const latestByTeam = new Map(
+  latestPerTeam.map(d => [d.TEAM?.trim(), d])
+)
+return {latestByTeam};
+}});
+
+define({id: "52cdf454", inputs: ["d3","latestPerTeam"], outputs: ["avgORTG","avgDRTG","xDomain","yDomain","labelX","labelY"], body: (d3,latestPerTeam) => {
+const avgORTG = d3.mean(latestPerTeam, d => d.ORTG_L5)
+const avgDRTG = d3.mean(latestPerTeam, d => d.DRTG_L5)
+
+const xDomain = d3.extent(latestPerTeam, d => d.ORTG_L5)
+  .map((d, i) => i === 0 ? d - 3 : d + 3)
+
+const yDomain = d3.extent(latestPerTeam, d => d.DRTG_L5)
+  .map((d, i) => i === 0 ? d - 3 : d + 3)
+
+const labelX = avgORTG + 4.1
+const labelY = avgDRTG + (labelX - avgORTG)
+return {avgORTG,avgDRTG,xDomain,yDomain,labelX,labelY};
+}});
+
+define({id: "a2784637", inputs: ["chartCard","Plot","DASHBOARD_WIDTH","CHART_HEIGHT","xDomain","yDomain","avgORTG","avgDRTG","labelX","labelY","latestPerTeam","logoMap"], outputs: ["efficiencyChart"], body: (chartCard,Plot,DASHBOARD_WIDTH,CHART_HEIGHT,xDomain,yDomain,avgORTG,avgDRTG,labelX,labelY,latestPerTeam,logoMap) => {
+const efficiencyChart = chartCard(
+  Plot.plot({
+    width: DASHBOARD_WIDTH,
+    height: CHART_HEIGHT,
+  grid: false,
+
+  marginTop: 30,
+  marginRight: 40,
+  marginBottom: 45,
+  marginLeft: 50,
+
+  style: {
+    background: "#dbddde",
+    color: "#111111",
+    fontFamily: "Inter, system-ui, sans-serif"
+  },
+
+  x: {
+    label: "Eficiencia Ofensiva",
+    domain: xDomain,
+    labelAnchor: "center",
+    labelArrow: false
+  },
+
+  y: {
+    label: "Eficiencia Defensiva",
+    reverse: true,
+    domain: yDomain,
+    labelArrow: false,
+    labelAnchor: "center",
+    rotate: -90
+
+  },
+
+  color: {
+    scheme: "RdYlGn",
+    legend: false
+  },
+
+  marks: [
+    Plot.raster({
+      x1: xDomain[0],
+      x2: xDomain[1],
+      y1: yDomain[0],
+      y2: yDomain[1],
+      pixelSize: 5,
+      fill: (x, y) => {
+        const offense = x - avgORTG
+        const defense = avgDRTG - y
+        return offense + defense
+      },
+      opacity: 0.36
+    }),
+
+    Plot.ruleX([avgORTG], {
+      stroke: "#666666",
+      strokeDasharray: "8 8",
+      strokeWidth: 1.5,
+      opacity: 0.75
+    }),
+
+    Plot.ruleY([avgDRTG], {
+      stroke: "#666666",
+      strokeDasharray: "8 8",
+      strokeWidth: 1.5,
+      opacity: 0.75
+    }),
+
+    Plot.line([
+      {
+        x: xDomain[0],
+        y: avgDRTG + (xDomain[0] - avgORTG)
+      },
+      {
+        x: xDomain[1],
+        y: avgDRTG + (xDomain[1] - avgORTG)
+      }
+    ], {
+      x: "x",
+      y: "y",
+      stroke: "#777777",
+      strokeDasharray: "2 5",
+      strokeWidth: 1.4,
+      opacity: 0.65
+    }),
+
+    Plot.text([{x: xDomain[0] + 0.4, y: yDomain[0] + 1.4, label: "DEFENSIVOS"}], {
+      x: "x",
+      y: "y",
+      text: "label",
+      fontSize: 20,
+      fill: "#222222",
+      opacity: 0.35,
+      textAnchor: "start"
+    }),
+
+    Plot.text([{x: xDomain[1] - 0.4, y: yDomain[0] + 1.4, label: "ELITES"}], {
+      x: "x",
+      y: "y",
+      text: "label",
+      fontSize: 20,
+      fill: "#222222",
+      opacity: 0.35,
+      textAnchor: "end"
+    }),
+
+    Plot.text([{x: xDomain[0] + 0.4, y: yDomain[1] - 1.1, label: "EN PROBLEMAS"}], {
+      x: "x",
+      y: "y",
+      text: "label",
+      fontSize: 20,
+      fill: "#222222",
+      opacity: 0.35,
+      textAnchor: "start"
+    }),
+
+    Plot.text([{x: xDomain[1] - 0.4, y: yDomain[1] - 1.1, label: "OFENSIVOS"}], {
+      x: "x",
+      y: "y",
+      text: "label",
+      fontSize: 20,
+      fill: "#222222",
+      opacity: 0.35,
+      textAnchor: "end"
+    }),
+
+    Plot.text([{x: labelX, y: labelY, label: "Promedio de la Liga →"}], {
+      x: "x",
+      y: "y",
+      text: "label",
+      rotate: 38,
+      fontSize: 14,
+      fill: "#555555",
+      opacity: 0.65,
+      textAnchor: "middle"
+    }),
+
+    Plot.image(latestPerTeam, {
+      x: "ORTG_L5",
+      y: "DRTG_L5",
+      src: d => logoMap[d.TEAM?.trim()],
+      width: 44,
+      height: 44
+    }),
+
+    Plot.dot(latestPerTeam, {
+    x: "ORTG_L5",
+    y: "DRTG_L5",
+    r: 28,
+    fill: "transparent",
+    stroke: "transparent",
+
+    channels: {
+        Equipo: "TEAM",
+        "Récord L5": "LAST5_RECORD",
+        "PPG L5": "PPG_L5",
+        "OPPG L5": "OPPG_L5"
+    },
+
+    tip: {
+        fill: "#ffff",
+        stroke: "#ffff",
+        format: {
+        x: false,
+        y: false,
+        Equipo: true,
+        "Récord L5": true,
+        "PPG L5": d => d.toFixed(1),
+        "OPPG L5": d => d.toFixed(1),
+        
+        }
+    }
+    })
+  ]
+  }),
+  "Panorama de eficiencia"
+)
+return {efficiencyChart};
+}});
+
+define({id: "0bab4a3e", inputs: ["Inputs","Generators"], outputs: ["pointDistLabelInput","pointDistLabel"], body: (Inputs,Generators) => {
+const pointDistLabelInput = Inputs.radio(["Anotados", "Permitidos"], {
+  label: "Point Distribution",
+  value: "Scored"
+})
+
+const pointDistLabel = Generators.input(pointDistLabelInput)
+return {pointDistLabelInput,pointDistLabel};
+}});
+
+define({id: "abeccd07", inputs: ["buildPointDistribution","filtered","pointDistLabel","DASHBOARD_WIDTH","CHART_HEIGHT","d3","logoMap","chartCard"], outputs: ["pointDistribution","width","height","margin","innerW","innerH","barW","color","svg","g","legend","pointDistChart"], body: (buildPointDistribution,filtered,pointDistLabel,DASHBOARD_WIDTH,CHART_HEIGHT,d3,logoMap,chartCard) => {
+const pointDistribution = buildPointDistribution(filtered, pointDistLabel)
+
+const width = DASHBOARD_WIDTH
+const height = CHART_HEIGHT
+const margin = {top: 55, right: 35, bottom: 100, left: 60}
+
+const innerW = width - margin.left - margin.right
+const innerH = height - margin.top - margin.bottom
+
+const barW = innerW / pointDistribution.length * 0.72
+
+const color = {
+  "2PT": "#d65a5a",
+  "FT": "#e0b43b",
+  "3PT": "#3b82c4"
+}
+
+const svg = d3.create("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .style("background", "#000")
+  .style("font-family", "Inter, system-ui, sans-serif")
+
+const g = svg.append("g")
+  .attr("transform", `translate(${margin.left},${margin.top})`)
+
+// GRID
+;[0, 0.5, 1].forEach(t => {
+  const y = innerH - t * innerH
+
+  g.append("line")
+    .attr("x1", 0)
+    .attr("x2", innerW)
+    .attr("y1", y)
+    .attr("y2", y)
+    .attr("stroke", "#777")
+    .attr("opacity", 0.28)
+
+  g.append("text")
+    .attr("x", -12)
+    .attr("y", y + 5)
+    .attr("text-anchor", "end")
+    .attr("fill", "#ddd")
+    .attr("font-size", 13)
+    .text(`${Math.round(t * 100)}%`)
+})
+
+// LEGEND
+const legend = svg.append("g")
+  .attr("transform", `translate(24,24)`)
+
+;["2PT", "FT", "3PT"].forEach((k, i) => {
+  legend.append("rect")
+    .attr("x", i * 70)
+    .attr("y", 0)
+    .attr("width", 16)
+    .attr("height", 16)
+    .attr("fill", color[k])
+
+  legend.append("text")
+    .attr("x", i * 70 + 23)
+    .attr("y", 13)
+    .attr("fill", "#ddd")
+    .attr("font-size", 13)
+    .text(k)
+})
+
+// BARS
+pointDistribution.forEach((d, i) => {
+  const x =
+    i * (innerW / pointDistribution.length) +
+    (innerW / pointDistribution.length - barW) / 2
+
+  const segments = [
+    {
+      type: "2PT",
+      value: d.PTS_2_PCT,
+      start: 0
+    },
+    {
+      type: "FT",
+      value: d.PTS_FT_PCT,
+      start: d.PTS_2_PCT
+    },
+    {
+      type: "3PT",
+      value: d.PTS_3_PCT,
+      start: d.PTS_2_PCT + d.PTS_FT_PCT
+    }
+  ]
+
+  segments.forEach(s => {
+    const yTop =
+      innerH - (s.start + s.value) * innerH
+
+    const h = s.value * innerH
+
+    g.append("rect")
+      .attr("x", x)
+      .attr("y", yTop)
+      .attr("width", barW)
+      .attr("height", h)
+      .attr("fill", color[s.type])
+      .attr("stroke", "white")
+      .attr("stroke-width", 0.8)
+
+    if (s.value >= 0.09) {
+      g.append("text")
+        .attr("x", x + barW / 2)
+        .attr("y", yTop + h / 2 + 4)
+        .attr("text-anchor", "middle")
+        .attr("fill", "white")
+        .attr("font-size", 12)
+        .attr("font-weight", 800)
+        .text(`${Math.round(s.value * 100)}%`)
+    }
+  })
+
+  g.append("image")
+    .attr("href", logoMap[d.TEAM?.trim()])
+    .attr("x", x + barW / 2 - 21)
+    .attr("y", innerH + 25)
+    .attr("width", 42)
+    .attr("height", 42)
+})
+
+svg.append("text")
+  .attr("x", width / 2)
+  .attr("y", 34)
+  .attr("text-anchor", "middle")
+  .attr("fill", "#ffffff")
+  .attr("font-size", 28)
+  .attr("font-weight", 900)
+  .text(
+    pointDistLabel === "Anotados"
+      ? "Distribución de puntos anotados"
+      : "Distribución de puntos permitidos"
+  )
+
+const pointDistChart = chartCard(
+  svg.node(),
+  "Distribución de puntos"
+)
+
+
+return {pointDistribution,width,height,margin,innerW,innerH,barW,color,svg,g,legend,pointDistChart};
+}});
+
+define({id: "77bedcf6", inputs: ["Inputs","Generators"], outputs: ["homeAwayMetricInput","homeAwayMetric"], body: (Inputs,Generators) => {
+const homeAwayMetricInput = Inputs.radio(["Ofensiva", "Defensa"], {
+  label: "Rating Local/Vis",
+  value: "Ofensiva"
+})
+
+const homeAwayMetric = Generators.input(homeAwayMetricInput)
+return {homeAwayMetricInput,homeAwayMetric};
+}});
+
+define({id: "f9757184", inputs: ["teamKey","d3"], outputs: ["buildHomeAwayRating"], body: (teamKey,d3) => {
+function buildHomeAwayRating(rows, mode = "Ofensiva") {
+  const isOffense = mode === "Ofensiva"
+
+  const withPoss = rows.map(d => ({
+    ...d,
+    TEAM_CLEAN: teamKey(d.TEAM),
+    OPP_CLEAN: teamKey(d.OPPONENT),
+    POSS: (+d.FGA || 0) + 0.44 * (+d.FTA || 0) + (+d.TO || 0)
+  }))
+
+  const lookup = new Map(
+    withPoss.map(d => [`${d.GAME_ID}|${d.TEAM_CLEAN}`, d])
+  )
+
+  const rated = withPoss.map(d => {
+    const oppRow = lookup.get(`${d.GAME_ID}|${d.OPP_CLEAN}`)
+
+    const ortg = 100 * (+d.PTS || 0) / d.POSS
+    const drtg = oppRow
+      ? 100 * (+oppRow.PTS || 0) / d.POSS
+      : null
+
+    return {
+      ...d,
+      VALUE: isOffense ? ortg : drtg
+    }
+  }).filter(d => Number.isFinite(d.VALUE))
+
+  const summary = Array.from(
+    d3.group(rated, d => d.TEAM_CLEAN),
+    ([team, teamRows]) => {
+      const homeRows = teamRows.filter(d => +d.HOMEAWAY === 1)
+      const awayRows = teamRows.filter(d => +d.HOMEAWAY === 0)
+
+      const home = d3.mean(homeRows, d => d.VALUE)
+      const away = d3.mean(awayRows, d => d.VALUE)
+
+      return {
+        TEAM: team,
+        HOME: home,
+        AWAY: away,
+        DIFF: isOffense ? home - away : away - home
+      }
+    }
+  ).filter(d => Number.isFinite(d.HOME) && Number.isFinite(d.AWAY))
+
+  return summary.sort((a, b) => d3.ascending(a.DIFF, b.DIFF))
+}
+return {buildHomeAwayRating};
+}});
+
+define({id: "6fc22744", inputs: ["buildHomeAwayRating","filtered","homeAwayMetric"], outputs: ["homeAwayData","isOffense","title","subtitle"], body: (buildHomeAwayRating,filtered,homeAwayMetric) => {
+const homeAwayData = buildHomeAwayRating(filtered, homeAwayMetric)
+const isOffense = homeAwayMetric === "Ofensiva"
+
+const title = isOffense
+  ? "BSN: Ofensiva Local vs Visitante"
+  : "BSN: Defensa Local vs Visitante"
+
+const subtitle = isOffense
+  ? "Rating ofensivo (ORTG): fuera ○ vs casa ●"
+  : "Rating defensivo (DRTG): casa ● vs fuera ○"
+
+  
+return {homeAwayData,isOffense,title,subtitle};
+}});
+
+define({id: "d9463094", inputs: ["buildHomeAwayRating","filtered","homeAwayMetric","DASHBOARD_WIDTH","CHART_HEIGHT","d3","teamColors","logoMap","chartCard"], outputs: ["homeAwayData","isOffense","widthHA","heightHA","marginHA","innerWHA","innerHHA","xVals","xMin","xMax","x","y","leagueAvg","svgHA","gHA","homeAwayChart"], body: (buildHomeAwayRating,filtered,homeAwayMetric,DASHBOARD_WIDTH,CHART_HEIGHT,d3,teamColors,logoMap,chartCard) => {
+const homeAwayData = buildHomeAwayRating(filtered, homeAwayMetric)
+const isOffense = homeAwayMetric === "Ofensiva"
+
+const widthHA = DASHBOARD_WIDTH
+const heightHA = CHART_HEIGHT
+const marginHA = {top: 115, right: 145, bottom: 70, left: 105}
+
+const innerWHA = widthHA - marginHA.left - marginHA.right
+const innerHHA = heightHA - marginHA.top - marginHA.bottom
+
+const xVals = homeAwayData.flatMap(d => [d.HOME, d.AWAY])
+const xMin = Math.floor((d3.min(xVals) - 5) / 5) * 5
+const xMax = Math.ceil((d3.max(xVals) + 5) / 5) * 5
+
+const x = d3.scaleLinear()
+.domain([xMin, xMax])
+.range([0, innerWHA])
+
+const y = d3.scaleBand()
+.domain(homeAwayData.map(d => d.TEAM))
+.range([0, innerHHA])
+.padding(0.35)
+
+const leagueAvg = d3.mean(xVals)
+
+const svgHA = d3.create("svg")
+.attr("width", widthHA)
+.attr("height", heightHA)
+.style("background", "#000")
+.style("font-family", "Inter, system-ui, sans-serif")
+
+const gHA = svgHA.append("g")
+.attr("transform", `translate(${marginHA.left},${marginHA.top})`)
+
+svgHA.append("text")
+.attr("x", widthHA / 2)
+.attr("y", 42)
+.attr("text-anchor", "middle")
+.attr("fill", "#fff")
+.attr("font-size", 34)
+.attr("font-weight", 900)
+.text(isOffense ? "BSN: Ofensiva Local vs Visitante" : "BSN: Defensa Local vs Visitante")
+
+svgHA.append("text")
+.attr("x", widthHA / 2)
+.attr("y", 72)
+.attr("text-anchor", "middle")
+.attr("fill", "#ddd")
+.attr("font-size", 16)
+.text(isOffense ? "Rating ofensivo: fuera ○ vs casa ●" : "Rating defensivo: casa ● vs fuera ○")
+
+for (const t of x.ticks(8)) {
+gHA.append("line")
+  .attr("x1", x(t))
+  .attr("x2", x(t))
+  .attr("y1", 0)
+  .attr("y2", innerHHA)
+  .attr("stroke", "#fff")
+  .attr("stroke-dasharray", "5 6")
+  .attr("opacity", 0.12)
+
+gHA.append("text")
+  .attr("x", x(t))
+  .attr("y", innerHHA + 35)
+  .attr("text-anchor", "middle")
+  .attr("fill", "#ddd")
+  .attr("font-size", 13)
+  .text(t)
+}
+
+gHA.append("line")
+.attr("x1", x(leagueAvg))
+.attr("x2", x(leagueAvg))
+.attr("y1", -12)
+.attr("y2", innerHHA)
+.attr("stroke", "#fff")
+.attr("stroke-dasharray", "6 6")
+.attr("opacity", 0.45)
+
+gHA.append("text")
+.attr("x", x(leagueAvg))
+.attr("y", -20)
+.attr("text-anchor", "middle")
+.attr("fill", "#aaa")
+.attr("font-size", 12)
+.attr("font-weight", 800)
+.text(`PROMEDIO LIGA ${leagueAvg.toFixed(1)}`)
+
+homeAwayData.forEach(d => {
+const yy = y(d.TEAM) + y.bandwidth() / 2
+const teamColor = teamColors[d.TEAM]?.edge ?? "#cccccc"
+const teamFill = teamColors[d.TEAM]?.fill ?? "#eeeeee"
+
+gHA.append("line")
+  .attr("x1", x(d.AWAY))
+  .attr("x2", x(d.HOME))
+  .attr("y1", yy)
+  .attr("y2", yy)
+  .attr("stroke", teamColor)
+  .attr("stroke-width", 8)
+  .attr("stroke-linecap", "round")
+  .attr("opacity", 0.18)
+
+gHA.append("line")
+  .attr("x1", x(d.AWAY))
+  .attr("x2", x(d.HOME))
+  .attr("y1", yy)
+  .attr("y2", yy)
+  .attr("stroke", teamColor)
+  .attr("stroke-width", 4)
+  .attr("stroke-linecap", "round")
+  .attr("opacity", 0.55)
+
+gHA.append("circle")
+  .attr("cx", x(d.AWAY))
+  .attr("cy", yy)
+  .attr("r", 10)
+  .attr("fill", "#000")
+  .attr("stroke", teamColor)
+  .attr("stroke-width", 4)
+
+gHA.append("circle")
+  .attr("cx", x(d.HOME))
+  .attr("cy", yy)
+  .attr("r", 14)
+  .attr("fill", teamFill)
+  .attr("stroke", teamColor)
+  .attr("stroke-width", 3)
+
+gHA.append("image")
+  .attr("href", logoMap[d.TEAM])
+  .attr("x", -78)
+  .attr("y", yy - 22)
+  .attr("width", 44)
+  .attr("height", 44)
+
+const swingText = isOffense
+  ? d.DIFF >= 0
+    ? `+${Math.abs(d.DIFF).toFixed(1)} EN CASA`
+    : `+${Math.abs(d.DIFF).toFixed(1)} FUERA`
+  : d.DIFF >= 0
+    ? `-${Math.abs(d.DIFF).toFixed(1)} EN CASA`
+    : `-${Math.abs(d.DIFF).toFixed(1)} FUERA`
+
+gHA.append("text")
+  .attr("x", innerWHA + 115)
+  .attr("y", yy + 5)
+  .attr("text-anchor", "end")
+  .attr("fill", d.DIFF >= 0 ? "#eeeeee" : "#999999")
+  .attr("font-size", 15)
+  .attr("font-weight", 900)
+  .text(swingText)
+})
+
+gHA.append("text")
+.attr("x", innerWHA / 2)
+.attr("y", innerHHA + 58)
+.attr("text-anchor", "middle")
+.attr("fill", "#ddd")
+.attr("font-size", 14)
+.text(isOffense ? "ORTG" : "DRTG")
+
+const homeAwayChart = chartCard(
+svgHA.node(),
+"Local vs visitante"
+)
+return {homeAwayData,isOffense,widthHA,heightHA,marginHA,innerWHA,innerHHA,xVals,xMin,xMax,x,y,leagueAvg,svgHA,gHA,homeAwayChart};
+}});
+
+define({id: "2eeb79d8", inputs: ["html","renderBSNMap","teamLocations","latestByTeam","efficiencyChart","pointDistChart","homeAwayChart","chartCard","shotChart","gameSliderInput","Inputs","shotTeams","shotTeam","shotTeamInput","playerTeamMap","shotPlayer","shotPlayerInput","pointDistLabel","pointDistLabelInput","homeAwayMetric","homeAwayMetricInput","gameSlider","display"], body: async (html,renderBSNMap,teamLocations,latestByTeam,efficiencyChart,pointDistChart,homeAwayChart,chartCard,shotChart,gameSliderInput,Inputs,shotTeams,shotTeam,shotTeamInput,playerTeamMap,shotPlayer,shotPlayerInput,pointDistLabel,pointDistLabelInput,homeAwayMetric,homeAwayMetricInput,gameSlider,display) => {
+display(await(
+html`
+<div style="
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 10px 32px 80px 32px;
+  display: grid;
+  grid-template-columns: 980px 340px;
+  gap: 32px;
+  align-items: start;
+">
+
+  <main>
+    ${renderBSNMap(teamLocations, latestByTeam)}
+    ${efficiencyChart}
+    ${pointDistChart}
+    ${homeAwayChart}
+    ${chartCard(shotChart, "Mapa de Tiro")}
+  </main>
+
+  <aside class="control-panel" style="
+    position: sticky;
+    top: 24px;
+    width: 300px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.035));
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 22px;
+    padding: 22px;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+    z-index: 10;
+  ">
+    <div style="color:#8fb3ff; font-size:12px; font-weight:900; letter-spacing:1.6px; text-transform:uppercase; margin-bottom:10px;">
+      Controles 
+    </div>
+
+    <div style="color:white; font-size:24px; font-weight:900; margin-bottom:22px; line-height:1.1;">
+      Filtros
+    </div>
+
+    <div style="margin-bottom:22px;">
+      <div style="color:#aaa; font-size:12px; font-weight:800; margin-bottom:8px; text-transform:uppercase;">
+        Juegos Jugados
+      </div>
+
+      <div style="width:260px; padding:6px 0; pointer-events:auto;">
+        ${gameSliderInput}
+      </div>
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="color:#aaa; font-size:12px; font-weight:800; margin-bottom:6px; text-transform:uppercase;">
+        Equipo
+      </div>
+      ${Inputs.bind(Inputs.select(shotTeams, {value: shotTeam}), shotTeamInput)}
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="color:#aaa; font-size:12px; font-weight:800; margin-bottom:6px; text-transform:uppercase;">
+        Mapa de tiro de:
+      </div>
+      ${Inputs.bind(
+        Inputs.select(
+          Object.entries(playerTeamMap)
+            .filter(([player, team]) => team === shotTeam)
+            .map(([player]) => player)
+            .sort(),
+          {value: shotPlayer}
+        ),
+        shotPlayerInput
+      )}
+    </div>
+
+    <div style="margin-bottom:18px;">
+      <div style="color:#aaa; font-size:12px; font-weight:800; margin-bottom:6px; text-transform:uppercase;">
+        Distribucion de puntos
+      </div>
+      ${Inputs.bind(Inputs.radio(["Anotados", "Permitidos"], {value: pointDistLabel}), pointDistLabelInput)}
+    </div>
+
+    <div style="margin-bottom:22px;">
+      <div style="color:#aaa; font-size:12px; font-weight:800; margin-bottom:6px; text-transform:uppercase;">
+        Rating Local / Visitante
+      </div>
+      ${Inputs.bind(Inputs.radio(["Ofensiva", "Defensa"], {value: homeAwayMetric}), homeAwayMetricInput)}
+    </div>
+
+    <div style="
+      border-top:1px solid rgba(255,255,255,0.1);
+      padding-top:16px;
+      color:#d8d8d8;
+      font-size:13px;
+      line-height:1.7;
+    ">
+      <div><b style="color:white;">Equipo:</b> ${shotTeam}</div>
+      <div><b style="color:white;">Jugador:</b> ${shotPlayer}</div>
+      <div><b style="color:white;">Juegos:</b> ${gameSlider}</div>
+    </div>
+  </aside>
+
+</div>
+`
+))
+}});
+
+</script>
+</head>
+<body>
+<div id="observablehq-center">
+<aside id="observablehq-toc" data-selector="h1:not(:first-of-type)[id], h2:first-child[id], :not(h1) + h2[id]">
+<nav>
+</nav>
+</aside>
+<main id="observablehq-main" class="observablehq">
+<div class="observablehq observablehq--block"><!--:412d35a3:--></div>
+<div class="observablehq observablehq--block"><!--:22ad7f01:--></div>
+<div class="observablehq observablehq--block"><!--:80fe0d61:--></div>
+<div class="observablehq observablehq--block"><!--:bdd860f3:--></div>
+<div class="observablehq observablehq--block"><!--:313ac660:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:8330b48f:--></div>
+<div class="observablehq observablehq--block"><!--:6dd19dc2:--></div>
+<div class="observablehq observablehq--block"><!--:ad8aacd5:--></div>
+<div class="observablehq observablehq--block"><!--:82f32cd1:--></div>
+<div class="observablehq observablehq--block"><!--:33318aea:--></div>
+<div class="observablehq observablehq--block"><!--:644bf312:--></div>
+<div class="observablehq observablehq--block"><!--:62337bc7:--></div>
+<div class="observablehq observablehq--block"><!--:0bbe08b9:--></div>
+<div class="observablehq observablehq--block"><!--:41004ca8:--></div>
+<div class="observablehq observablehq--block"><!--:e0477970:--></div>
+<div class="observablehq observablehq--block"><!--:7520ed88:--></div>
+<div class="observablehq observablehq--block"><!--:8aeee626:--></div>
+<div class="observablehq observablehq--block"><!--:a900d1b9:--></div>
+<div class="observablehq observablehq--block"><!--:c45bf9c0:--></div>
+<div class="observablehq observablehq--block"><!--:d6a91ce3:--></div>
+<div class="observablehq observablehq--block"><!--:92f6a671:--></div>
+<div class="observablehq observablehq--block"><!--:8b66aafa:--></div>
+<div class="observablehq observablehq--block"><!--:be304cc0:--></div>
+<div class="observablehq observablehq--block"><!--:01834fc0:--></div>
+<div class="observablehq observablehq--block"><!--:86efc81e:--></div>
+<div class="observablehq observablehq--block"><!--:9ed51cba:--></div>
+<div class="observablehq observablehq--block"><!--:9f4d0528:--></div>
+<div class="observablehq observablehq--block"><!--:cb39bb7c:--></div>
+<div class="observablehq observablehq--block"><!--:52cdf454:--></div>
+<div class="observablehq observablehq--block"><!--:a2784637:--></div>
+<div class="observablehq observablehq--block"><!--:0bab4a3e:--></div>
+<div class="observablehq observablehq--block"><!--:abeccd07:--></div>
+<div class="observablehq observablehq--block"><!--:77bedcf6:--></div>
+<div class="observablehq observablehq--block"><!--:f9757184:--></div>
+<div class="observablehq observablehq--block"><!--:6fc22744:--></div>
+<div class="observablehq observablehq--block"><!--:d9463094:--></div>
+<div class="observablehq observablehq--block"><observablehq-loading></observablehq-loading><!--:2eeb79d8:--></div>
+</main>
+<footer id="observablehq-footer">
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2026-05-19T22:54:04">May 19, 2026</a>.</div>
+</footer>
+</div>
+</body>
+</html>
